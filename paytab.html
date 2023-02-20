@@ -86,22 +86,22 @@
     <input type="submit" value="Pay">
 </form>
 <script type="text/javascript">
-        document.getElementById("paymentform").addEventListener("submit", function(event) {
-  sendContactForm();
-  event.preventDefault();
-});
     var form = document.getElementById('paymentform');
-    paylib.inlineForm({
-        'key': 'C7KM2D-HTRD62-DPTRQR-2VB69R',
-        'form': form,
-        'autoSubmit': true,
-        'callback': function (response) {
-            document.getElementById('errors').innerHTML = '';
-            if (response.error) {
-                paylib.handleError(form, document.getElementById('errors'), response);
+    form.addEventListener('submit', function (event) {
+        event.preventDefault(); // prevent the form from submitting and reloading the page
+        paylib.inlineForm({
+            'key': 'C7KM2D-HTRD62-DPTRQR-2VB69R',
+            'form': form,
+            'autoSubmit': true,
+            'callback': function (response) {
+                document.getElementById('errors').innerHTML = '';
+                if (response.error) {
+                    paylib.handleError(form, document.getElementById('errors'), response);
+                }
             }
-        }
+        });
     });
 </script>
+
 </body>
 </html>
