@@ -80,12 +80,16 @@
     </div>
     <div class="row">
         <label>Post code</label>
-        <input type="number" name="postcode" value="12345">
+        <input type="number" name="postcode" value="123456">
     </div>
     <br>
     <input type="submit" value="Pay">
 </form>
 <script type="text/javascript">
+        document.getElementById("paymentform").addEventListener("submit", function(event) {
+  sendContactForm();
+  event.preventDefault();
+});
     var form = document.getElementById('paymentform');
     paylib.inlineForm({
         'key': 'C7KM2D-HTRD62-DPTRQR-2VB69R',
