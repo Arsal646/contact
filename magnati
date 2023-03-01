@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hi</title>
+</head>
+
+<body>
+
+
+    <div id="initiate3dsSimpleRedirect" xmlns="http://www.w3.org/1999/html"> <iframe id="methodFrame" name="methodFrame"
+            height="500" width="500"> </iframe>
+        <form id="initiate3dsSimpleRedirectForm" method="POST"
+            action="https://ap.gateway.mastercard.com/acs/mastercard/v2/method" target="methodFrame"> <input
+                type="hidden" name="threeDSMethodData"
+                value="eyJ0aHJlZURTTWV0aG9kTm90aWZpY2F0aW9uVVJMIjoiaHR0cHM6Ly9hcC5nYXRld2F5Lm1hc3RlcmNhcmQuY29tL2NhbGxiYWNrSW50ZXJmYWNlL2dhdGV3YXkvMTgzMjBjMjRjMzZjNzY3NzRiOTEyOWViOTNhYTRhNjA4OTMxN2YzYTNiMzcxNzc5YWU3NmRmNmExMjFmM2ZmNiIsInRocmVlRFNTZXJ2ZXJUcmFuc0lEIjoiYzQzNjMxM2ItZTAyYy00MWJjLTkxYzktYjI4Y2RmNmNjMWMyIn0=" />
+        </form>
+        <script
+            id="initiate-authentication-script"> var e = document.getElementById("initiate3dsSimpleRedirectForm"); if (e) { e.submit(); if (e.parentNode !== null) { e.parentNode.removeChild(e); } } </script>
+    </div>
+</body>
+
+</html>
